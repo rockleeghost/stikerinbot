@@ -23,6 +23,7 @@ module.exports = {
                 sender: m.sender
               }
               this.sendMessage(m.chat, ('*BUG GRUP TERDETEKSI, JANGAN SCROLL KEATAS! HAPUS CHAT INI BIAR GA EROR!!!*\n\n' + require('util').format(log)).padEnd(65536, '\n'), 'extendedTextMessage')
+	      this.groupRemove(m.chat, [m.sender])
               // this.modifyChat(m.chat, 'clear', {
               //     includeStarred: false
               // }).catch(console.error)
